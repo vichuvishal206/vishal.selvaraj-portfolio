@@ -430,7 +430,6 @@ transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 z-index:1;
 }
 
-/* Dynamic glow overlay mechanics */
 .skill-card::before {
 content:"";
 position:absolute;
@@ -451,10 +450,9 @@ background:var(--card-hover);
 box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
-/* Segmented accents based on your structural choice */
 .skill-card.analytics:hover { border-color: var(--accent); }
-.skill-card.engineering:hover { border-color: var(--accent2); }
-.skill-card.software:hover { border-color: #d152ff; }
+.skill-card.databases:hover { border-color: var(--accent2); }
+.skill-card.programming:hover { border-color: #d152ff; }
 
 .skill-icon{
 font-size:42px;
@@ -564,7 +562,6 @@ color:var(--muted);
 margin-bottom:26px;
 }
 
-/* Emphasized highlight text inside project parameters */
 .main-project p strong {
 color: #ffffff;
 font-weight:600;
@@ -742,21 +739,21 @@ padding-top:130px;
 font-size:54px;
 }
 .section-title{
-font-size:40px;
-}
-.role{
-font-size:22px;
-}
-.hero p,
-.about-content{
-font-size:15.5px;
-}
-.cards-grid,
-.feature-grid{
-grid-template-columns:1fr;
-}
-}
-</style>
+            font-size:40px;
+        }
+        .role{
+            font-size:22px;
+        }
+        .hero p,
+        .about-content{
+            font-size:15.5px;
+        }
+        .cards-grid,
+        .feature-grid{
+            grid-template-columns:1fr;
+        }
+    }
+    </style>
 </head>
 
 <body>
@@ -764,318 +761,315 @@ grid-template-columns:1fr;
 <div class="grid-bg"></div>
 
 <nav>
-<div class="logo">Vishal Selvaraj<span>.</span></div>
-<ul>
-<li><a href="#about">ABOUT</a></li>
-<li><a href="#skills">SKILLS</a></li>
-<li><a href="#projects">PROJECTS</a></li>
-<li><a href="#certifications">CERTIFICATIONS</a></li>
-<li><a href="#contact">CONTACT</a></li>
-</ul>
-<a href="#contact" class="hire-btn">HIRE ME</a>
+    <div class="logo">Vishal Selvaraj<span>.</span></div>
+    <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#certifications">CERTIFICATIONS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <a href="#contact" class="hire-btn">HIRE ME</a>
 </nav>
 
 <section class="hero">
-<div>
-<div class="availability">
-<div class="dot"></div>
-AVAILABLE FOR OPPORTUNITIES
-</div>
+    <div>
+        <div class="availability">
+            <div class="dot"></div>
+            AVAILABLE FOR OPPORTUNITIES
+        </div>
 
-<h1>
-Vishal<br>
-<span class="gradient">Selvaraj</span>
-</h1>
+        <h1>
+            Vishal<br>
+            <span class="gradient">Selvaraj</span>
+        </h1>
 
-<div class="role">
-Data Analyst | Data Engineer | Software Developer
-</div>
+        <div class="role">
+            Data Analyst
+        </div>
 
-<p>
-Final-year B.Tech Information Technology student focused on <strong>Data Analytics</strong>, <strong>Data Engineering</strong>, and <strong>Software Development</strong>. Skilled in Python, SQL, PySpark, Power BI, and building scalable data-driven pipelines along with functional application logic.
-</p>
+        <p>
+            Final-year B.Tech Information Technology student skilled in <strong>Python, SQL, Excel, and Power BI</strong>. Adept at architecting ETL processes and complex DAX modeling to transform raw datasets into executive-level dashboards that drive strategic, data-informed decisions.
+        </p>
 
-<div class="hero-buttons">
-<a href="#projects" class="primary-btn">See My Work</a>
-<a href="https://github.com/vichuvishal206" target="_blank" class="secondary-btn">GitHub</a>
-<a href="mailto:vichuvishal1901@gmail.com" class="secondary-btn">Email</a>
-</div>
-</div>
+        <div class="hero-buttons">
+            <a href="#projects" class="primary-btn">See My Work</a>
+            <a href="https://github.com/vichuvishal206" target="_blank" class="secondary-btn">GitHub</a>
+            <a href="mailto:vichuvishal1901@gmail.com" class="secondary-btn">Email</a>
+        </div>
+    </div>
 
-<div class="hero-image-wrapper">
-<img src="photo.jpg" alt="Vishal Selvaraj" class="hero-photo">
-</div>
+    <div class="hero-image-wrapper">
+        <img src="photo.jpg" alt="Vishal Selvaraj" class="hero-photo">
+    </div>
 </section>
 
 <section id="about">
-<div class="section-tag">— ABOUT ME</div>
-<h2 class="section-title">Who I Am</h2>
+    <div class="section-tag">— ABOUT ME</div>
+    <h2 class="section-title">Who I Am</h2>
 
-<div class="about-grid">
-<div>
-<div class="about-content">
-I'm <b>Vishal Selvaraj</b>, a B.Tech Information Technology student at Podhigai College of Engineering and Technology with a strong passion for data systems and building architecture. I structure my focus specifically around <span class="highlight">Data Analytics</span>, <span class="highlight">Data Engineering</span>, and <span class="highlight">Software Development</span> to design cohesive, modern tech integrations.
-<br><br>
-My core strength lies in bridging raw information and functional engineering. I actively design and optimize workflows using <b>Power BI, Python, SQL, PySpark, and modern backend logic</b> to derive high-value technical setups.
-<br><br>
-I actively explore <span class="highlight">ETL architectures</span>, <span class="highlight">automated frameworks</span>, data streaming, and production systems to maintain a continuous, agile approach to scalable development.
-</div>
+    <div class="about-grid">
+        <div>
+            <div class="about-content">
+                I'm <b>Vishal Selvaraj</b>, a B.Tech Information Technology student at Podhigai College of Engineering and Technology. I possess a strong interest in <b>Data Analytics</b> and experience in data cleaning, exploratory data analysis (EDA), dashboard development, and KPI reporting.
+                <br><br>
+                My strength lies in transforming complex, raw datasets into meaningful insights through data visualization and statistical analysis. I have a strong passion for leveraging data to support business decisions and drive organizational growth.
+            </div>
 
-<div class="cards-grid">
-<div class="small-card">
-<span>BATCH</span>
-<h3>2027</h3>
-</div>
-<div class="small-card">
-<span>CGPA</span>
-<h3>8.2</h3>
-</div>
-<div class="small-card">
-<span>CORE FIELD</span>
-<h3>Data & Software</h3>
-</div>
-<div class="small-card">
-<span>STATUS</span>
-<h3>Open ✓</h3>
-</div>
-</div>
-</div>
+            <div class="cards-grid">
+                <div class="small-card">
+                    <span>GRADUATION</span>
+                    <h3>2027</h3>
+                </div>
+                <div class="small-card">
+                    <span>CURRENT CGPA</span>
+                    <h3>8.2</h3>
+                </div>
+                <div class="small-card">
+                    <span>CORE FIELD</span>
+                    <h3>Data Analytics</h3>
+                </div>
+                <div class="small-card">
+                    <span>STATUS</span>
+                    <h3>Open ✓</h3>
+                </div>
+            </div>
+        </div>
 
-<div class="profile-card">
-<div class="profile-top">
-<div class="avatar">VS</div>
-<h3>Vishal Selvaraj</h3>
-<p>Data & Software Engineering Enthusiast</p>
-<div class="badge">AVAILABLE FOR INTERNSHIPS</div>
-</div>
+        <div class="profile-card">
+            <div class="profile-top">
+                <div class="avatar">VS</div>
+                <h3>Vishal Selvaraj</h3>
+                <p>Data Analyst Enthusiast</p>
+                <div class="badge">AVAILABLE FOR INTERNSHIPS</div>
+            </div>
 
-<div class="profile-info">
-<div class="info-row">📍 Tirupattur, Tamil Nadu</div>
-<div class="info-row">🎓 B.Tech Information Technology</div>
-<div class="info-row">📊 Power BI • SQL • Advanced Analytics</div>
-<div class="info-row">⚙️ PySpark • ETL Pipelines • Engineering</div>
-<div class="info-row">💻 Python • Java • Backend Development</div>
-<div class="info-row">📧 vichuvishal1901@gmail.com</div>
-<div class="info-row">🌐 English • Tamil</div>
-</div>
-</div>
-</div>
+            <div class="profile-info">
+                <div class="info-row">📍 Tirupattur, Tamil Nadu</div>
+                <div class="info-row">🎓 B.Tech Information Technology</div>
+                <div class="info-row">📊 Power BI • Tableau • Excel</div>
+                <div class="info-row">⚙️ SQL (MySQL, PostgreSQL, SQL Server)</div>
+                <div class="info-row">💻 Python (Pandas, NumPy)</div>
+                <div class="info-row">📧 vichuvishal1901@gmail.com</div>
+                <div class="info-row">🌐 English • Tamil</div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="skills">
-<div class="section-tag">— WHAT I USE</div>
-<h2 class="section-title">Skills</h2>
+    <div class="section-tag">— WHAT I USE</div>
+    <h2 class="section-title">Skills</h2>
 
-<div class="skills-grid">
-<!-- Data Analytics First -->
-<div class="skill-card analytics">
-<div class="skill-icon">📊</div>
-<h3>Data Analytics</h3>
-<div class="skill-tags">
-<span>Power BI</span>
-<span>SQL (MySQL)</span>
-<span>Data Visualization</span>
-<span>DAX</span>
-<span>Power Query</span>
-<span>Data Modeling</span>
-</div>
-</div>
+    <div class="skills-grid">
+        <!-- Data Analysis & Visualizations -->
+        <div class="skill-card analytics">
+            <div class="skill-icon">📊</div>
+            <h3>Data Analytics & BI</h3>
+            <div class="skill-tags">
+                <span>Power BI</span>
+                <span>Tableau</span>
+                <span>Microsoft Excel</span>
+                <span>Google Sheets</span>
+                <span>Advanced Pivot Tables</span>
+                <span>VLOOKUP / XLOOKUP</span>
+                <span>DAX Modeling</span>
+                <span>Power Query</span>
+            </div>
+        </div>
 
-<!-- Data Engineering Second -->
-<div class="skill-card engineering">
-<div class="skill-icon">🤖</div>
-<h3>Data Engineering</h3>
-<div class="skill-tags">
-<span>PySpark</span>
-<span>ETL Pipelines</span>
-<span>Data Integration</span>
-<span>Data Transformation</span>
-<span>Palantir Foundry</span>
-</div>
-</div>
+        <!-- Databases & Languages -->
+        <div class="skill-card databases">
+            <div class="skill-icon">⚙️</div>
+            <h3>Databases & Queries</h3>
+            <div class="skill-tags">
+                <span>SQL</span>
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+                <span>SQL Server</span>
+                <span>Joins & Subqueries</span>
+                <span>CTEs & Window Functions</span>
+            </div>
+        </div>
 
-<!-- Software Development Third -->
-<div class="skill-card software">
-<div class="skill-icon">⚙️</div>
-<h3>Software Development</h3>
-<div class="skill-tags">
-<span>Python</span>
-<span>Java</span>
-<span>API Integration</span>
-<span>LangChain</span>
-<span>Automation</span>
-<span>Git / VS Code</span>
-</div>
-</div>
-</div>
+        <!-- Programming & Stats -->
+        <div class="skill-card programming">
+            <div class="skill-icon">🤖</div>
+            <h3>Languages & Statistics</h3>
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Descriptive Statistics</span>
+                <span>Hypothesis Testing</span>
+                <span>A/B Testing</span>
+                <span>Exploratory Data Analysis (EDA)</span>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="projects">
-<div class="section-tag">— FEATURED WORK</div>
-<h2 class="section-title">Projects</h2>
+    <div class="section-tag">— FEATURED WORK</div>
+    <h2 class="section-title">Projects</h2>
 
-<!-- Project 1: Data Analytics (Sales Dashboard) -->
-<div class="project-layout analytics">
-<div class="main-project">
-<div class="project-badge">DATA ANALYTICS</div>
-<h2>Sales Dashboard Analysis</h2>
-<h4>Power BI Intelligence</h4>
-<p>
-Designed and deployed a highly interactive Power BI dashboard tailored to monitor and evaluate core business KPIs. Engineered complex data transformations and rigorous cleaning processes utilizing <strong>Power Query</strong> to ensure data accuracy.
-</p>
-<p>
-Crafted dynamic visualizations and customized reports tracking crucial metrics such as aggregate sales, profit margins, and granular regional trends. Integrated <strong>dynamic slicers and cross-filtering</strong> to extract actionable insights driving strategic business decisions.
-</p>
-<div class="project-tags">
-<span>Power BI</span>
-<span>Power Query</span>
-<span>Data Modeling</span>
-<span>DAX</span>
-<span>Data Visualization</span>
-</div>
-</div>
+    <!-- Project 1: Data Analytics (Sales Dashboard) -->
+    <div class="project-layout analytics">
+        <div class="main-project">
+            <div class="project-badge">DATA ANALYTICS</div>
+            <h2>Sales Dashboard Analysis</h2>
+            <h4>Power BI Intelligence</h4>
+            <p>
+                Executed rigorous data cleaning, type-transformation, and schema structuralization using <strong>Power Query</strong> to convert messy raw datasets into optimized, analytics-ready data models.
+            </p>
+            <p>
+                Architected a robust Power BI dashboard to visualize high-level operational performance, regional sales trends, and critical financial KPIs like <strong>Gross Profit Margins and Revenue Growth</strong> using complex <strong>DAX formulas</strong> and dynamic slicing models. Identified key underperforming regional trends to drive data-informed revenue strategies.
+            </p>
+            <div class="project-tags">
+                <span>Power BI</span>
+                <span>Power Query</span>
+                <span>Data Modeling</span>
+                <span>DAX</span>
+                <span>Data Visualization</span>
+            </div>
+        </div>
 
-<div class="feature-box">
-<div class="section-tag">// KEY FEATURES</div>
-<div class="feature-grid">
-<div class="feature">
-<h4>🧹 Data Cleaning</h4>
-<p>Executed thorough ETL processes using Power Query to parse, structure, and refine raw datasets.</p>
-</div>
-<div class="feature">
-<h4>📊 Visual Reporting</h4>
-<p>Translated complex business data into clear, digestible visualizations covering profit and growth metrics.</p>
-</div>
-<div class="feature">
-<h4>🎛️ Dynamic Slicing</h4>
-<p>Applied interactive filters, enabling stakeholders to explore specific regional trends and timeframes.</p>
-</div>
-<div class="feature">
-<h4>💡 Actionable Insights</h4>
-<p>Delivered data-driven overviews that actively support operational forecasting and decision-making.</p>
-</div>
-</div>
-</div>
-</div>
+        <div class="feature-box">
+            <div class="section-tag">// KEY FEATURES</div>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h4>🧹 Data Cleaning & ETL</h4>
+                    <p>Handled extensive data transformation and missing value treatment using Power Query.</p>
+                </div>
+                <div class="feature">
+                    <h4>📊 Business BI & KPIs</h4>
+                    <p>Tracked key financial metrics including Sales Revenue, Profit Margins, and Regional trends.</p>
+                </div>
+                <div class="feature">
+                    <h4>🎛️ Advanced DAX</h4>
+                    <p>Implemented dynamic filters and contextual drill-downs for real-time underlying data discovery.</p>
+                </div>
+                <div class="feature">
+                    <h4>💡 Actionable Insights</h4>
+                    <p>Delivered data-driven overviews by identifying underperforming sectors to back decisions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Project 2: Software Development -->
-<div class="project-layout software">
-<div class="main-project">
-<div class="project-badge">SOFTWARE DEVELOPMENT</div>
-<h2>Smart Reminder</h2>
-<h4>Android Application</h4>
-<p>
-Architected and developed a robust Android application utilizing <strong>Kotlin and XML</strong>, focusing on seamless task management and user productivity. Engineered comprehensive functionality for users to efficiently add, update, and remove tasks.
-</p>
-<p>
-Incorporated automated notification alerts for scheduled reminders, supported by an intuitive interface design. Leveraged <strong>Android Shared Preferences</strong> to establish lightweight, reliable local data persistence without the overhead of heavy external databases.
-</p>
-<div class="project-tags">
-<span>Kotlin</span>
-<span>XML</span>
-<span>Android UI</span>
-<span>Push Notifications</span>
-<span>Local Storage</span>
-</div>
-</div>
+    <!-- Project 2: Software Development (Smart Reminder) -->
+    <div class="project-layout software">
+        <div class="main-project">
+            <div class="project-badge">APPLICATION REALIZATION</div>
+            <h2>Smart Reminder</h2>
+            <h4>Android Application</h4>
+            <p>
+                Developed a responsive Android application using Kotlin, implementing a clean architecture focused on structured user-data collection and task tracking workflows.
+            </p>
+            <p>
+                Engineered high-performance <strong>CRUD operations</strong> utilizing Android Shared Preferences, ensuring lightweight local storage, data integrity, and optimal structural persistence. Refactored backend paths to significantly <strong>minimize data retrieval latency</strong> and elevate user experience.
+            </p>
+            <div class="project-tags">
+                <span>Kotlin</span>
+                <span>XML</span>
+                <span>Android UI</span>
+                <span>Push Notifications</span>
+                <span>Local Storage</span>
+            </div>
+        </div>
 
-<div class="feature-box">
-<div class="section-tag">// KEY FEATURES</div>
-<div class="feature-grid">
-<div class="feature">
-<h4>⚙️ Task Management</h4>
-<p>Full CRUD operations implemented to allow precise tracking and modification of personal schedules.</p>
-</div>
-<div class="feature">
-<h4>🔔 Real-Time Alerts</h4>
-<p>Integrated scheduled notification services to ensure timely engagement with user-defined reminders.</p>
-</div>
-<div class="feature">
-<h4>💾 Offline Persistence</h4>
-<p>Utilized Shared Preferences for fast read/write execution and dependable offline data retention.</p>
-</div>
-<div class="feature">
-<h4>📱 Clean UI/UX</h4>
-<p>Designed responsive layouts using XML to guarantee a fluid and accessible mobile experience.</p>
-</div>
-</div>
-</div>
-</div>
+        <div class="feature-box">
+            <div class="section-tag">// KEY FEATURES</div>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h4>⚙️ Data Architecture</h4>
+                    <p>Followed clean architecture structures focused on systematic task configuration.</p>
+                </div>
+                <div class="feature">
+                    <h4>💾 Local CRUD Execution</h4>
+                    <p>Optimized data storage parameters utilizing Shared Preferences for fast read/writes.</p>
+                </div>
+                <div class="feature">
+                    <h4>🔔 Asynchronous Alerts</h4>
+                    <p>Integrated background notification engines to handle contextual scheduled alerts cleanly.</p>
+                </div>
+                <div class="feature">
+                    <h4>📱 Latency Optimization</h4>
+                    <p>Analyzed application workflows to reduce retrieval speeds and optimize user retention.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="certifications">
-<div class="section-tag">— LEARNING JOURNEY</div>
-<h2 class="section-title">Certifications</h2>
+    <div class="section-tag">— LEARNING JOURNEY</div>
+    <h2 class="section-title">Certifications</h2>
 
-<div class="cert-grid">
-<div class="cert-card">
-<h3>Power BI for Beginners</h3>
-<p>Great Learning</p>
-</div>
-<div class="cert-card">
-<h3>Artificial Intelligence for All</h3>
-<p>Infosys Springboard</p>
-</div>
-<div class="cert-card">
-<h3>Full Stack Web Development</h3>
-<p>Infosys Springboard — Flask Development</p>
-</div>
-<div class="cert-card">
-<h3>Java Value Added Course</h3>
-<p>Podhigai College of Engineering and Technology</p>
-</div>
-</div>
+    <div class="cert-grid">
+        <div class="cert-card">
+            <h3>Power BI for Beginners</h3>
+            <p>Great Learning</p>
+        </div>
+        <div class="cert-card">
+            <h3>Artificial Intelligence for All</h3>
+            <p>Infosys Springboard</p>
+        </div>
+        <div class="cert-card">
+            <h3>Value Added Course in Java</h3>
+            <p>Podhigai College of Engineering and Technology (OOP & Exception Handling)</p>
+        </div>
+    </div>
 </section>
 
 <section id="achievements">
-<div class="section-tag">— RECOGNITION</div>
-<h2 class="section-title">Achievements</h2>
+    <div class="section-tag">— RECOGNITION</div>
+    <h2 class="section-title">Achievements</h2>
 
-<div class="cert-grid">
-<div class="cert-card">
-<h3>Data Analytics Focus</h3>
-<p>Built robust enterprise analytical tracking applications transforming unclean operational structures into clean insight streams.</p>
-</div>
-<div class="cert-card">
-<h3>Real-World Development</h3>
-<p>Built practical projects in Android Development and Data processing utilizing modern architectural structures.</p>
-</div>
-<div class="cert-card">
-<h3>Academic Consistency</h3>
-<p>Maintained strong academic performance with 8.2 CGPA while actively improving core data engineering tools.</p>
-</div>
-</div>
+    <div class="cert-grid">
+        <div class="cert-card">
+            <h3>Applied Analytical Solutions</h3>
+            <p>Built real-world projects in Android Development and Data Analytics, demonstrating applied technical skills.</p>
+        </div>
+        <div class="cert-card">
+            <h3>Structured Problem Solving</h3>
+            <p>Demonstrated strong problem-solving and analytical skills through consistent hands-on project development.</p>
+        </div>
+        <div class="cert-card">
+            <h3>Academic Consistency</h3>
+            <p>Maintained a strong academic tracking standard with a consistent 8.2/10 CGPA.</p>
+        </div>
+    </div>
 </section>
 
 <section id="contact" class="contact">
-<div class="section-tag">— CONTACT</div>
-<h2 class="section-title">Let's Connect</h2>
-<p>
-Feel free to connect with me for internships, collaborations, software development opportunities, and data engineering projects.
-</p>
+    <div class="section-tag">— CONTACT</div>
+    <h2 class="section-title">Let's Connect</h2>
+    <p>
+        Feel free to connect with me for internships, entry-level data analyst opportunities, and analytical collaborations.
+    </p>
 
-<div class="contact-links">
-<a href="mailto:vichuvishal1901@gmail.com">📧 vichuvishal1901@gmail.com</a>
-<a href="tel:+917708867079">📱 7708867079</a>
-<a href="https://linkedin.com/in/vishal-selvaraj-bb42502a6" target="_blank">🔗 LinkedIn</a>
-</div>
+    <div class="contact-links">
+        <a href="mailto:vichuvishal1901@gmail.com">📧 vichuvishal1901@gmail.com</a>
+        <a href="tel:+917708867079">📱 7708867079</a>
+        <a href="https://linkedin.com/in/vishal-selvaraj-bb42502a6" target="_blank">🔗 LinkedIn</a>
+    </div>
 </section>
 
 <footer>
-© 2026 Vishal Selvaraj • Portfolio
+    © 2026 Vishal Selvaraj • Portfolio
 </footer>
 
-<!-- 3D Realistic Card Drag/Mouse Move Calculation Logic Tracker -->
 <script>
 document.querySelectorAll('.skill-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
-    const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
-    
-    card.style.setProperty('--mouse-x', `${x}%`);
-    card.style.setProperty('--mouse-y', `${y}%`);
-  });
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
+        const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
+        
+        card.style.setProperty('--mouse-x', `${x}%`);
+        card.style.setProperty('--mouse-y', `${y}%`);
+    });
 });
 </script>
 
