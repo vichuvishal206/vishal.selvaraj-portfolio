@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -16,15 +17,13 @@ scroll-behavior:smooth;
 }
 
 :root{
---bg:#030612;
---card:#080d22;
---card-hover:rgba(13,22,56,0.7);
---border:rgba(255,255,255,0.05);
+--bg:#050816;
+--card:#0d1328;
+--border:rgba(255,255,255,0.07);
 --text:#ffffff;
---muted:#8fa0c2;
+--muted:#9aa9c7;
 --accent:#23e6b1;
 --accent2:#4ea1ff;
---glow:rgba(35,230,177,0.15);
 }
 
 body{
@@ -41,8 +40,8 @@ position:fixed;
 width:100%;
 height:100%;
 background:
-radial-gradient(circle at 80% 20%, rgba(35,230,177,0.12), transparent 40%),
-radial-gradient(circle at 10% 80%, rgba(78,161,255,0.08), transparent 40%);
+radial-gradient(circle at top right, rgba(35,230,177,0.15), transparent 30%),
+radial-gradient(circle at bottom left, rgba(78,161,255,0.10), transparent 30%);
 z-index:-2;
 }
 
@@ -50,14 +49,15 @@ z-index:-2;
 position:fixed;
 inset:0;
 background-image:
-linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-background-size:60px 60px;
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size:70px 70px;
 z-index:-1;
-opacity:0.3;
+opacity:0.22;
 }
 
 /* NAVBAR */
+
 nav{
 position:fixed;
 top:0;
@@ -66,21 +66,19 @@ padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(3,6,18,0.7);
-backdrop-filter:blur(20px);
-border-bottom:1px solid var(--border);
+background:rgba(2,8,20,0.55);
+backdrop-filter:blur(16px);
+border-bottom:1px solid rgba(255,255,255,0.05);
 z-index:1000;
 }
 
 .logo{
 font-size:26px;
 font-weight:800;
-letter-spacing:-1px;
 }
 
 .logo span{
 color:var(--accent);
-text-shadow:0 0 10px var(--glow);
 }
 
 nav ul{
@@ -95,35 +93,33 @@ color:#c5d3ef;
 font-size:13px;
 letter-spacing:1px;
 font-weight:500;
-transition:0.3s ease;
+transition:0.3s;
 }
 
 nav ul li a:hover{
 color:var(--accent);
-text-shadow:0 0 8px var(--glow);
 }
 
 .hire-btn{
-padding:11px 24px;
-background:linear-gradient(135deg, var(--accent), #1ad19f);
-color:#050816;
+padding:11px 22px;
+background:var(--accent);
+color:#07111f;
 border-radius:12px;
 font-weight:700;
 text-decoration:none;
 font-size:14px;
-box-shadow:0 4px 15px rgba(35,230,177,0.2);
-transition:0.3s cubic-bezier(0.4, 0, 0.2, 1);
+transition:0.3s;
 }
 
 .hire-btn:hover{
-transform:translateY(-2px);
-box-shadow:0 6px 20px rgba(35,230,177,0.4);
+transform:translateY(-3px);
 }
 
 /* HERO */
+
 .hero{
 min-height:100vh;
-padding:140px 8% 80px;
+padding:130px 8% 80px;
 display:grid;
 grid-template-columns:1.2fr 0.8fr;
 gap:60px;
@@ -138,11 +134,10 @@ padding:10px 20px;
 border:1px solid rgba(35,230,177,0.25);
 border-radius:50px;
 margin-bottom:28px;
-background:rgba(35,230,177,0.04);
+background:rgba(35,230,177,0.05);
 color:var(--accent);
-font-size:11px;
+font-size:12px;
 letter-spacing:2px;
-font-weight:600;
 }
 
 .dot{
@@ -150,22 +145,14 @@ width:8px;
 height:8px;
 border-radius:50%;
 background:var(--accent);
-box-shadow:0 0 10px var(--accent);
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse {
-0% { opacity:0.4; }
-50% { opacity:1; }
-100% { opacity:0.4; }
 }
 
 .hero h1{
-font-size:82px;
+font-size:78px;
 line-height:0.95;
 font-weight:800;
-letter-spacing:-4px;
-margin-bottom:20px;
+letter-spacing:-3px;
+margin-bottom:18px;
 }
 
 .gradient{
@@ -175,10 +162,9 @@ background:linear-gradient(90deg,var(--accent),var(--accent2));
 }
 
 .role{
-font-size:26px;
+font-size:28px;
 font-weight:700;
 margin-bottom:24px;
-color:#e2ecff;
 }
 
 .hero p{
@@ -197,37 +183,31 @@ flex-wrap:wrap;
 
 .primary-btn,
 .secondary-btn{
-padding:15px 28px;
+padding:15px 26px;
 border-radius:14px;
 font-weight:600;
 text-decoration:none;
-transition:0.3s cubic-bezier(0.4, 0, 0.2, 1);
+transition:0.3s;
 font-size:14px;
 }
 
 .primary-btn{
 background:var(--accent);
-color:#050816;
-box-shadow:0 4px 15px rgba(35,230,177,0.15);
+color:#07111f;
 }
 
 .secondary-btn{
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 color:white;
 }
 
-.primary-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 25px rgba(35,230,177,0.3);
-}
-
+.primary-btn:hover,
 .secondary-btn:hover{
-background:rgba(255,255,255,0.07);
-border-color:rgba(255,255,255,0.2);
-transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
+/* HERO IMAGE STYLING */
 .hero-image-wrapper {
 display: flex;
 justify-content: center;
@@ -239,45 +219,44 @@ width: 100%;
 max-width: 350px;
 height: 400px;
 object-fit: cover;
-border-radius: 32px;
-border: 1px solid rgba(35, 230, 177, 0.2);
-box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+border-radius: 28px;
+border: 1px solid rgba(35, 230, 177, 0.3);
+box-shadow: 0 20px 40px rgba(2, 8, 20, 0.6), 0 0 30px rgba(35, 230, 177, 0.15);
 background: var(--card);
-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition: 0.4s ease;
 }
 
 .hero-photo:hover {
-transform: translateY(-10px) scale(1.02);
+transform: translateY(-8px);
 border-color: var(--accent2);
-box-shadow: 0 35px 65px rgba(0,0,0,0.9), 0 0 40px rgba(78, 161, 255, 0.2);
+box-shadow: 0 25px 45px rgba(2, 8, 20, 0.7), 0 0 35px rgba(78, 161, 255, 0.25);
 }
 
-/* SECTION GLOBAL */
+/* SECTION */
+
 section{
-padding:100px 8%;
+padding:90px 8%;
 }
 
 .section-tag{
 color:var(--accent);
 letter-spacing:3px;
 font-size:12px;
-font-weight:700;
 margin-bottom:14px;
-text-transform: uppercase;
 }
 
 .section-title{
-font-size:52px;
-margin-bottom:60px;
+font-size:48px;
+margin-bottom:50px;
 letter-spacing:-2px;
-font-weight:800;
 }
 
 /* ABOUT */
+
 .about-grid{
 display:grid;
 grid-template-columns:1.2fr 0.8fr;
-gap:50px;
+gap:40px;
 }
 
 .about-content{
@@ -288,188 +267,128 @@ color:var(--muted);
 
 .about-content b{
 color:white;
-font-weight:600;
 }
 
 .highlight{
-background: linear-gradient(120deg, rgba(35,230,177,0.15) 0%, rgba(35,230,177,0.05) 100%);
-padding: 2px 8px;
-border-radius: 6px;
-color: var(--accent);
-border: 1px solid rgba(35,230,177,0.2);
-display: inline-block;
+color:var(--accent);
+font-weight:600;
 }
 
 .profile-card{
-background:var(--card);
+background:rgba(13,18,39,0.92);
 border:1px solid var(--border);
-border-radius:30px;
+border-radius:28px;
 overflow:hidden;
-transition:0.4s ease;
-}
-
-.profile-card:hover {
-border-color: rgba(255,255,255,0.12);
-box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .profile-top{
-padding:40px;
-background:linear-gradient(135deg,rgba(35,230,177,0.1),transparent);
-border-bottom:1px solid var(--border);
+padding:35px;
+background:linear-gradient(135deg,rgba(35,230,177,0.15),transparent);
 }
 
 .avatar{
-width:80px;
-height:80px;
-border-radius:24px;
+width:75px;
+height:75px;
+border-radius:20px;
 background:linear-gradient(135deg,var(--accent),var(--accent2));
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:30px;
+font-size:28px;
 font-weight:800;
-color:#050816;
-margin-bottom:24px;
-box-shadow:0 8px 20px rgba(35,230,177,0.2);
+color:#07111f;
+margin-bottom:22px;
 }
 
 .profile-top h3{
-font-size:32px;
+font-size:30px;
 margin-bottom:8px;
-letter-spacing:-1px;
 }
 
 .profile-top p{
-color:#94a8cc;
-font-size:15px;
+color:#91a4c5;
+font-size:16px;
 margin-bottom:20px;
 }
 
 .badge{
 display:inline-block;
-padding:10px 20px;
+padding:10px 18px;
 border-radius:50px;
 border:1px solid rgba(35,230,177,0.3);
 color:var(--accent);
-font-size:11px;
+font-size:12px;
 letter-spacing:1px;
-font-weight:600;
 background:rgba(35,230,177,0.05);
 }
 
 .profile-info{
-padding:30px 40px;
+padding:30px 35px;
 }
 
 .info-row{
 padding:16px 0;
-border-bottom:1px solid rgba(255,255,255,0.03);
+border-bottom:1px solid rgba(255,255,255,0.05);
 font-size:15px;
-color:#9bb2d9;
-display: flex;
-align-items: center;
-gap:12px;
-}
-
-.info-row:last-child {
-border: none;
+color:#9bb0d0;
 }
 
 .cards-grid{
-margin-top:40px;
+margin-top:35px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
 }
 
 .small-card{
-background:var(--card);
-padding:30px;
-border-radius:24px;
+background:rgba(13,18,39,0.9);
+padding:28px;
+border-radius:22px;
 border:1px solid var(--border);
-transition:0.3s ease;
-}
-
-.small-card:hover{
-transform:translateY(-4px);
-border-color:rgba(78,161,255,0.2);
-background:var(--card-hover);
 }
 
 .small-card span{
-font-size:11px;
+font-size:12px;
 letter-spacing:2px;
-color:#7788a8;
+color:#8190b2;
 display:block;
-margin-bottom:12px;
-font-weight:700;
+margin-bottom:14px;
 }
 
 .small-card h3{
-font-size:32px;
-color:var(--accent2);
-font-weight:800;
+font-size:34px;
+color:var(--accent);
 }
 
-/* HIGH-REALISM INTERACTIVE SKILLS GRID */
+/* SKILLS */
+
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:28px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:24px;
 }
 
 .skill-card{
-background:var(--card);
-padding:40px 35px;
-border-radius:28px;
+background:rgba(13,18,39,0.92);
+padding:32px;
+border-radius:26px;
 border:1px solid var(--border);
-position:relative;
-overflow:hidden;
-transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-z-index:1;
-}
-
-.skill-card::before {
-content:"";
-position:absolute;
-inset:0;
-background:radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06) 0%, transparent 60%);
-opacity:0;
-transition:opacity 0.3s ease;
-z-index:-1;
-}
-
-.skill-card:hover::before {
-opacity:1;
+transition:0.3s;
 }
 
 .skill-card:hover{
 transform:translateY(-8px);
-background:var(--card-hover);
-box-shadow:0 20px 40px rgba(0,0,0,0.5);
+border-color:rgba(35,230,177,0.3);
 }
-
-.skill-card.analytics:hover { border-color: var(--accent); }
-.skill-card.databases:hover { border-color: var(--accent2); }
-.skill-card.programming:hover { border-color: #d152ff; }
 
 .skill-icon{
-font-size:42px;
-margin-bottom:26px;
-display:inline-block;
-transition:transform 0.3s ease;
-}
-
-.skill-card:hover .skill-icon {
-transform: scale(1.1) rotate(5deg);
+font-size:38px;
+margin-bottom:24px;
 }
 
 .skill-card h3{
 font-size:24px;
-margin-bottom:24px;
-font-weight:700;
-letter-spacing:-0.5px;
+margin-bottom:22px;
 }
 
 .skill-tags{
@@ -479,92 +398,70 @@ gap:10px;
 }
 
 .skill-tags span{
-padding:10px 16px;
-border-radius:12px;
-background:rgba(3,6,18,0.6);
-border:1px solid rgba(255,255,255,0.05);
+padding:9px 14px;
+border-radius:10px;
+background:#111b33;
+border:1px solid rgba(255,255,255,0.06);
 font-size:13px;
-color:#a6b7db;
-font-weight:500;
-transition:0.2s ease;
+color:#aab8d6;
 }
 
-.skill-card:hover .skill-tags span {
-border-color: rgba(255,255,255,0.1);
-color: #ffffff;
-background: #030612;
-}
+/* PROJECTS */
 
-/* PROJECTS STRUCTURE */
 .project-layout{
 display:grid;
 grid-template-columns:1.1fr 0.9fr;
-gap:32px;
-margin-bottom: 70px;
+gap:28px;
+margin-bottom: 60px;
 }
 
 .main-project{
-background:var(--card);
-padding:45px;
-border-radius:32px;
-border:1px solid var(--border);
-transition:0.4s ease;
-}
-
-.main-project:hover {
-border-color: rgba(255,255,255,0.1);
-box-shadow:0 25px 50px rgba(0,0,0,0.4);
+background:rgba(13,18,39,0.95);
+padding:38px;
+border-radius:30px;
+border:1px solid rgba(35,230,177,0.25);
 }
 
 .project-badge{
 display:inline-block;
-padding:10px 20px;
+padding:10px 18px;
 border-radius:50px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-color:#ffffff;
-letter-spacing:1.5px;
-font-size:11px;
-font-weight:700;
+background:rgba(35,230,177,0.08);
+border:1px solid rgba(35,230,177,0.3);
+color:var(--accent);
+letter-spacing:1px;
+font-size:12px;
 margin-bottom:28px;
 }
 
-.analytics .project-badge {
-background:rgba(35,230,177,0.06);
-border-color:rgba(35,230,177,0.25);
-color:var(--accent);
-}
-
-.software .project-badge {
-background:rgba(78,161,255,0.06);
-border-color:rgba(78,161,255,0.25);
-color:var(--accent2);
-}
-
 .main-project h2{
-font-size:44px;
-margin-bottom:12px;
-letter-spacing:-1.5px;
-font-weight:800;
+font-size:42px;
+margin-bottom:10px;
 }
 
 .main-project h4{
-color:var(--muted);
+color:var(--accent);
 font-size:18px;
-margin-bottom:26px;
-font-weight:500;
+margin-bottom:24px;
 }
 
 .main-project p{
-font-size:16.5px;
+font-size:16px;
 line-height:1.9;
 color:var(--muted);
-margin-bottom:26px;
+margin-bottom:14px;
 }
 
-.main-project p strong {
-color: #ffffff;
-font-weight:600;
+.project-bullets {
+margin-left: 20px;
+margin-bottom: 24px;
+color: var(--muted);
+}
+
+.project-bullets li {
+margin-bottom: 10px;
+font-size: 15px;
+line-height: 1.7;
 }
 
 .project-tags{
@@ -574,59 +471,47 @@ gap:10px;
 }
 
 .project-tags span{
-padding:10px 16px;
-background:#030612;
-border-radius:12px;
-border:1px solid rgba(255,255,255,0.04);
+padding:9px 14px;
+background:#111b33;
+border-radius:10px;
 font-size:13px;
-color:#a2b2d4;
-font-weight:500;
+color:#a9b6d3;
 }
 
 .feature-box{
-background:var(--card);
-padding:40px;
-border-radius:32px;
+background:rgba(13,18,39,0.95);
+padding:35px;
+border-radius:30px;
 border:1px solid var(--border);
-display: flex;
-flex-direction: column;
-justify-content: center;
 }
 
 .feature-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:20px;
-margin-top:24px;
+gap:18px;
+margin-top:28px;
 }
 
 .feature {
-padding:26px;
-background:#040817;
-border-radius:22px;
-border:1px solid rgba(255,255,255,0.03);
-transition:0.3s ease;
-}
-
-.feature:hover {
-transform: scale(1.02);
-border-color: rgba(255,255,255,0.08);
+padding:24px;
+background:#0f1730;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .feature h4{
-margin:0 0 12px;
-font-size:19px;
-font-weight:700;
-color:#ffffff;
+margin:16px 0 12px;
+font-size:20px;
 }
 
 .feature p{
 line-height:1.7;
 font-size:14px;
-color:#8c9cb8;
+color:#93a4c3;
 }
 
 /* CERTIFICATIONS */
+
 .cert-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -634,46 +519,37 @@ gap:24px;
 }
 
 .cert-card{
-background:var(--card);
-padding:35px;
+background:rgba(13,18,39,0.92);
+padding:32px;
 border-radius:24px;
 border:1px solid var(--border);
-transition:0.3s ease;
-}
-
-.cert-card:hover{
-border-color: rgba(255,255,255,0.1);
-transform: translateY(-4px);
-background: var(--card-hover);
+transition:0.3s;
 }
 
 .cert-card h3{
-font-size:21px;
-margin-bottom:12px;
-font-weight:700;
-letter-spacing:-0.5px;
+font-size:22px;
+margin-bottom:14px;
 }
 
 .cert-card p{
 line-height:1.8;
 font-size:15px;
-color:var(--accent2);
-font-weight:500;
+color:#97a7c5;
 }
 
 /* CONTACT */
+
 .contact{
 text-align:center;
-background: radial-gradient(circle at center, rgba(35,230,177,0.04) 0%, transparent 70%);
 }
 
 .contact p{
-font-size:18px;
+font-size:17px;
 color:#9bb0d0;
 line-height:1.9;
 max-width:750px;
 margin:auto;
-margin-bottom:45px;
+margin-bottom:40px;
 }
 
 .contact-links{
@@ -684,76 +560,89 @@ flex-wrap:wrap;
 }
 
 .contact-links a{
-padding:16px 28px;
-border-radius:18px;
-background:var(--card);
+padding:15px 24px;
+border-radius:16px;
+background:rgba(13,18,39,0.92);
 border:1px solid var(--border);
 text-decoration:none;
 color:white;
 font-weight:600;
-font-size:15px;
-transition:0.3s ease;
+font-size:14px;
+transition:0.3s;
 }
 
 .contact-links a:hover{
 background:var(--accent);
-color:#050816;
-border-color:var(--accent);
+color:#07111f;
 transform:translateY(-4px);
-box-shadow:0 10px 25px rgba(35,230,177,0.25);
 }
 
 /* FOOTER */
+
 footer{
-padding:35px;
+padding:28px;
 text-align:center;
-color:#6e7d99;
+color:#7f90b0;
 font-size:14px;
-border-top:1px solid var(--border);
-margin-top:60px;
+border-top:1px solid rgba(255,255,255,0.05);
+margin-top:40px;
 }
 
-/* RESPONSIVE STRUCTURES */
+/* RESPONSIVE */
+
 @media(max-width:1100px){
+
 .hero,
 .about-grid,
 .project-layout{
 grid-template-columns:1fr;
 }
+
 .hero h1{
-font-size:68px;
+font-size:65px;
 }
+
 .hero-image-wrapper {
 margin-top: 30px;
 }
+
 }
 
 @media(max-width:768px){
+
 nav ul{
 display:none;
 }
+
 .hero{
-padding-top:130px;
+padding-top:120px;
 }
+
 .hero h1{
-font-size:54px;
+font-size:52px;
 }
+
 .section-title{
-            font-size:40px;
-        }
-        .role{
-            font-size:22px;
-        }
-        .hero p,
-        .about-content{
-            font-size:15.5px;
-        }
-        .cards-grid,
-        .feature-grid{
-            grid-template-columns:1fr;
-        }
-    }
-    </style>
+font-size:38px;
+}
+
+.role{
+font-size:22px;
+}
+
+.hero p,
+.about-content{
+font-size:15px;
+}
+
+.cards-grid,
+.feature-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
 
 <body>
@@ -761,317 +650,473 @@ font-size:54px;
 <div class="grid-bg"></div>
 
 <nav>
-    <div class="logo">Vishal Selvaraj<span>.</span></div>
-    <ul>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#certifications">CERTIFICATIONS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-    </ul>
-    <a href="#contact" class="hire-btn">HIRE ME</a>
+
+<div class="logo">Vishal Selvaraj<span>.</span></div>
+
+<ul>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#skills">SKILLS</a></li>
+<li><a href="#projects">PROJECTS</a></li>
+<li><a href="#certifications">CERTIFICATIONS</a></li>
+<li><a href="#contact">CONTACT</a></li>
+</ul>
+
+<a href="#contact" class="hire-btn">HIRE ME</a>
+
 </nav>
 
 <section class="hero">
-    <div>
-        <div class="availability">
-            <div class="dot"></div>
-            AVAILABLE FOR OPPORTUNITIES
-        </div>
 
-        <h1>
-            Vishal<br>
-            <span class="gradient">Selvaraj</span>
-        </h1>
+<div>
 
-        <div class="role">
-            Data Analyst
-        </div>
+<div class="availability">
+<div class="dot"></div>
+AVAILABLE FOR OPPORTUNITIES
+</div>
 
-        <p>
-            Final-year B.Tech Information Technology student skilled in <strong>Python, SQL, Excel, and Power BI</strong>. Adept at architecting ETL processes and complex DAX modeling to transform raw datasets into executive-level dashboards that drive strategic, data-informed decisions.
-        </p>
+<h1>
+Vishal<br>
+<span class="gradient">Selvaraj</span>
+</h1>
 
-        <div class="hero-buttons">
-            <a href="#projects" class="primary-btn">See My Work</a>
-            <a href="https://github.com/vichuvishal206" target="_blank" class="secondary-btn">GitHub</a>
-            <a href="mailto:vichuvishal1901@gmail.com" class="secondary-btn">Email</a>
-        </div>
-    </div>
+<div class="role">
+Data Engineering Student | AI Workflows Specialist
+</div>
 
-    <div class="hero-image-wrapper">
-        <img src="photo.jpg" alt="Vishal Selvaraj" class="hero-photo">
-    </div>
+<p>
+Results-driven Data Engineering student at Podhigai College of Engineering and Technology with demonstrated hands-on experience in ETL pipelines, big data systems, and intelligent system integrations. Skilled at accelerating development cycles using AI-assisted workflows and advanced prompt engineering.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="primary-btn">
+See My Work
+</a>
+
+<a href="https://github.com/" target="_blank" class="secondary-btn">
+GitHub
+</a>
+
+<a href="mailto:vichuvishal1901@gmail.com" class="secondary-btn">
+Email
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image-wrapper">
+<img src="photo.jpg/photo.jpg" alt="Vishal Selvaraj" class="hero-photo">
+</div>
+
 </section>
 
 <section id="about">
-    <div class="section-tag">— ABOUT ME</div>
-    <h2 class="section-title">Who I Am</h2>
 
-    <div class="about-grid">
-        <div>
-            <div class="about-content">
-                I'm <b>Vishal Selvaraj</b>, a B.Tech Information Technology student at Podhigai College of Engineering and Technology. I possess a strong interest in <b>Data Analytics</b> and experience in data cleaning, exploratory data analysis (EDA), dashboard development, and KPI reporting.
-                <br><br>
-                My strength lies in transforming complex, raw datasets into meaningful insights through data visualization and statistical analysis. I have a strong passion for leveraging data to support business decisions and drive organizational growth.
-            </div>
+<div class="section-tag">— ABOUT ME</div>
+<h2 class="section-title">Who I Am</h2>
 
-            <div class="cards-grid">
-                <div class="small-card">
-                    <span>GRADUATION</span>
-                    <h3>2027</h3>
-                </div>
-                <div class="small-card">
-                    <span>CURRENT CGPA</span>
-                    <h3>8.2</h3>
-                </div>
-                <div class="small-card">
-                    <span>CORE FIELD</span>
-                    <h3>Data Analytics</h3>
-                </div>
-                <div class="small-card">
-                    <span>STATUS</span>
-                    <h3>Open ✓</h3>
-                </div>
-            </div>
-        </div>
+<div class="about-grid">
 
-        <div class="profile-card">
-            <div class="profile-top">
-                <div class="avatar">VS</div>
-                <h3>Vishal Selvaraj</h3>
-                <p>Data Analyst Enthusiast</p>
-                <div class="badge">AVAILABLE FOR INTERNSHIPS</div>
-            </div>
+<div>
 
-            <div class="profile-info">
-                <div class="info-row">📍 Tirupattur, Tamil Nadu</div>
-                <div class="info-row">🎓 B.Tech Information Technology</div>
-                <div class="info-row">📊 Power BI • Tableau • Excel</div>
-                <div class="info-row">⚙️ SQL (MySQL, PostgreSQL, SQL Server)</div>
-                <div class="info-row">💻 Python (Pandas, NumPy)</div>
-                <div class="info-row">📧 vichuvishal1901@gmail.com</div>
-                <div class="info-row">🌐 English • Tamil</div>
-            </div>
-        </div>
-    </div>
+<div class="about-content">
+
+I'm <b>Vishal Selvaraj</b>, an IT student specializing in <span class="highlight">Data Engineering</span> with a solid foundation in building production-ready architectures, database solutions, and intelligent applications.
+
+<br><br>
+
+My engineering philosophy revolves around combining powerful frameworks like <b>Python, SQL, PySpark, and Palantir Foundry</b> with advanced AI workflows to optimize execution speed and data architecture consistency.
+
+<br><br>
+
+I focus on developing optimized <span class="highlight">ETL pipelines, data transformations, and comprehensive analytical models</span> that convert raw datasets into impactful, data-driven decisions.
+
+</div>
+
+<div class="cards-grid">
+
+<div class="small-card">
+<span>EXPECTED GRADUATION</span>
+<h3>2027</h3>
+</div>
+
+<div class="small-card">
+<span>ACADEMIC CGPA</span>
+<h3>8.2</h3>
+</div>
+
+<div class="small-card">
+<span>CORE FOCUS</span>
+<h3>Data Engineering & AI Workflows</h3>
+</div>
+
+<div class="small-card">
+<span>AVAILABILITY</span>
+<h3>Open ✓</h3>
+</div>
+
+</div>
+
+</div>
+
+<div class="profile-card">
+
+<div class="profile-top">
+
+<div class="avatar">
+VS
+</div>
+
+<h3>Vishal Selvaraj</h3>
+
+<p>
+Data Engineer & Intelligent Systems Learner
+</p>
+
+<div class="badge">
+AVAILABLE FOR INTERNSHIPS
+</div>
+
+</div>
+
+<div class="profile-info">
+
+<div class="info-row">📍 Tirupattur, Tamil Nadu</div>
+
+<div class="info-row">🎓 B.Tech Information Technology</div>
+
+<div class="info-row">💻 PySpark • SQL • Python • Linux</div>
+
+<div class="info-row">📊 Power BI • Palantir Foundry • ETL</div>
+
+<div class="info-row">📧 vichuvishal1901@gmail.com</div>
+
+<div class="info-row">🌐 English • Tamil</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="skills">
-    <div class="section-tag">— WHAT I USE</div>
-    <h2 class="section-title">Skills</h2>
 
-    <div class="skills-grid">
-        <!-- Data Analysis & Visualizations -->
-        <div class="skill-card analytics">
-            <div class="skill-icon">📊</div>
-            <h3>Data Analytics & BI</h3>
-            <div class="skill-tags">
-                <span>Power BI</span>
-                <span>Tableau</span>
-                <span>Microsoft Excel</span>
-                <span>Google Sheets</span>
-                <span>Advanced Pivot Tables</span>
-                <span>VLOOKUP / XLOOKUP</span>
-                <span>DAX Modeling</span>
-                <span>Power Query</span>
-            </div>
-        </div>
+<div class="section-tag">— WHAT I USE</div>
+<h2 class="section-title">Skills</h2>
 
-        <!-- Databases & Languages -->
-        <div class="skill-card databases">
-            <div class="skill-icon">⚙️</div>
-            <h3>Databases & Queries</h3>
-            <div class="skill-tags">
-                <span>SQL</span>
-                <span>MySQL</span>
-                <span>PostgreSQL</span>
-                <span>SQL Server</span>
-                <span>Joins & Subqueries</span>
-                <span>CTEs & Window Functions</span>
-            </div>
-        </div>
+<div class="skills-grid">
 
-        <!-- Programming & Stats -->
-        <div class="skill-card programming">
-            <div class="skill-icon">🤖</div>
-            <h3>Languages & Statistics</h3>
-            <div class="skill-tags">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>NumPy</span>
-                <span>Descriptive Statistics</span>
-                <span>Hypothesis Testing</span>
-                <span>A/B Testing</span>
-                <span>Exploratory Data Analysis (EDA)</span>
-            </div>
-        </div>
-    </div>
+<div class="skill-card">
+
+<div class="skill-icon">⚙️</div>
+
+<h3>Programming & Core</h3>
+
+<div class="skill-tags">
+<span>Python</span>
+<span>SQL</span>
+<span>Java (OOP)</span>
+<span>Linux</span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<div class="skill-icon">🤖</div>
+
+<h3>Data Engineering & Big Data</h3>
+
+<div class="skill-tags">
+<span>PySpark</span>
+<span>ETL Pipelines</span>
+<span>Data Integration</span>
+<span>Data Transformation</span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<div class="skill-icon">🧠</div>
+
+<h3>Platforms & Analytics</h3>
+
+<div class="skill-tags">
+<span>Palantir Foundry</span>
+<span>Power BI</span>
+<span>Power Query</span>
+<span>MySQL</span>
+<span>Excel (Advanced)</span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<div class="skill-icon">🛠️</div>
+
+<h3>AI & Modern Workflows</h3>
+
+<div class="skill-tags">
+<span>Prompt Engineering</span>
+<span>AI-Assisted Engineering</span>
+<span>Intelligent Systems</span>
+<span>Problem Solving</span>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="projects">
-    <div class="section-tag">— FEATURED WORK</div>
-    <h2 class="section-title">Projects</h2>
 
-    <!-- Project 1: Data Analytics (Sales Dashboard) -->
-    <div class="project-layout analytics">
-        <div class="main-project">
-            <div class="project-badge">DATA ANALYTICS</div>
-            <h2>Sales Dashboard Analysis</h2>
-            <h4>Power BI Intelligence</h4>
-            <p>
-                Executed rigorous data cleaning, type-transformation, and schema structuralization using <strong>Power Query</strong> to convert messy raw datasets into optimized, analytics-ready data models.
-            </p>
-            <p>
-                Architected a robust Power BI dashboard to visualize high-level operational performance, regional sales trends, and critical financial KPIs like <strong>Gross Profit Margins and Revenue Growth</strong> using complex <strong>DAX formulas</strong> and dynamic slicing models. Identified key underperforming regional trends to drive data-informed revenue strategies.
-            </p>
-            <div class="project-tags">
-                <span>Power BI</span>
-                <span>Power Query</span>
-                <span>Data Modeling</span>
-                <span>DAX</span>
-                <span>Data Visualization</span>
-            </div>
-        </div>
+<div class="section-tag">— FEATURED WORK</div>
+<h2 class="section-title">Projects</h2>
 
-        <div class="feature-box">
-            <div class="section-tag">// KEY FEATURES</div>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h4>🧹 Data Cleaning & ETL</h4>
-                    <p>Handled extensive data transformation and missing value treatment using Power Query.</p>
-                </div>
-                <div class="feature">
-                    <h4>📊 Business BI & KPIs</h4>
-                    <p>Tracked key financial metrics including Sales Revenue, Profit Margins, and Regional trends.</p>
-                </div>
-                <div class="feature">
-                    <h4>🎛️ Advanced DAX</h4>
-                    <p>Implemented dynamic filters and contextual drill-downs for real-time underlying data discovery.</p>
-                </div>
-                <div class="feature">
-                    <h4>💡 Actionable Insights</h4>
-                    <p>Delivered data-driven overviews by identifying underperforming sectors to back decisions.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="project-layout">
 
-    <!-- Project 2: Software Development (Smart Reminder) -->
-    <div class="project-layout software">
-        <div class="main-project">
-            <div class="project-badge">APPLICATION REALIZATION</div>
-            <h2>Smart Reminder</h2>
-            <h4>Android Application</h4>
-            <p>
-                Developed a responsive Android application using Kotlin, implementing a clean architecture focused on structured user-data collection and task tracking workflows.
-            </p>
-            <p>
-                Engineered high-performance <strong>CRUD operations</strong> utilizing Android Shared Preferences, ensuring lightweight local storage, data integrity, and optimal structural persistence. Refactored backend paths to significantly <strong>minimize data retrieval latency</strong> and elevate user experience.
-            </p>
-            <div class="project-tags">
-                <span>Kotlin</span>
-                <span>XML</span>
-                <span>Android UI</span>
-                <span>Push Notifications</span>
-                <span>Local Storage</span>
-            </div>
-        </div>
+<div class="main-project">
 
-        <div class="feature-box">
-            <div class="section-tag">// KEY FEATURES</div>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h4>⚙️ Data Architecture</h4>
-                    <p>Followed clean architecture structures focused on systematic task configuration.</p>
-                </div>
-                <div class="feature">
-                    <h4>💾 Local CRUD Execution</h4>
-                    <p>Optimized data storage parameters utilizing Shared Preferences for fast read/writes.</p>
-                </div>
-                <div class="feature">
-                    <h4>🔔 Asynchronous Alerts</h4>
-                    <p>Integrated background notification engines to handle contextual scheduled alerts cleanly.</p>
-                </div>
-                <div class="feature">
-                    <h4>📱 Latency Optimization</h4>
-                    <p>Analyzed application workflows to reduce retrieval speeds and optimize user retention.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="project-badge">
+DATA ANALYTICS & ETL
+</div>
+
+<h2>Enterprise Sales Performance & KPI Analytics Dashboard</h2>
+
+<h4>
+Power BI Intelligence
+</h4>
+
+<ul class="project-bullets">
+<li><b>Designed and deployed</b> an interactive business intelligence dashboard to track critical corporate KPIs, including sales performance, profit margins, and regional market trends.</li>
+<li><b>Executed end-to-end ETL processes</b> using Power Query to ingest, clean, and transform disparate data sources, ensuring 100% data integrity and consistency.</li>
+<li><b>Developed advanced data models</b> incorporating dynamic filters, slicers, and structured relationships to optimize query performance and reporting efficiency.</li>
+<li><b>Generated actionable insights</b> through advanced data visualization, enabling stakeholders to make strategic, data-driven business decisions.</li>
+</ul>
+
+<div class="project-tags">
+<span>Power BI</span>
+<span>Power Query</span>
+<span>Data Modeling</span>
+<span>DAX</span>
+<span>Data Visualization</span>
+</div>
+
+</div>
+
+<div class="feature-box">
+
+<div class="section-tag">// KEY METRICS</div>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h4>🧹 Data Cleaning</h4>
+<p>
+Executed thorough ETL processes using Power Query to parse, structure, and refine raw datasets.
+</p>
+</div>
+
+<div class="feature">
+<h4>📊 Visual Reporting</h4>
+<p>
+Translated complex business data into clear, digestible visualizations covering profit and growth metrics.
+</p>
+</div>
+
+<div class="feature">
+<h4>🎛️ Dynamic Slicing</h4>
+<p>
+Applied interactive filters, enabling stakeholders to explore specific regional trends and timeframes.
+</p>
+</div>
+
+<div class="feature">
+<h4>💡 Actionable Insights</h4>
+<p>
+Delivered data-driven overviews that actively support operational forecasting and decision-making.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-layout">
+
+<div class="main-project">
+
+<div class="project-badge">
+MOBILE DEVELOPMENT
+</div>
+
+<h2>Smart Task Scheduler & Automated Reminder Application</h2>
+
+<h4>
+Android Application
+</h4>
+
+<ul class="project-bullets">
+<li><b>Architected and developed</b> a native Android application using Kotlin, implementing full CRUD functionality for optimized task and schedule management.</li>
+<li><b>Engineered local data persistence</b> by strategically utilizing Shared Preferences to ensure lightweight, high-performance, and secure local data storage.</li>
+<li><b>Integrated automated background notification alerts</b> to deliver accurate, real-time reminders for user-scheduled workflows.</li>
+<li><b>Designed an intuitive and responsive UI/UX</b> utilizing XML layouts, significantly improving user interaction, navigation, and overall application engagement.</li>
+</ul>
+
+<div class="project-tags">
+<span>Kotlin</span>
+<span>XML</span>
+<span>Android UI</span>
+<span>Push Notifications</span>
+<span>Local Storage</span>
+</div>
+
+</div>
+
+<div class="feature-box">
+
+<div class="section-tag">// KEY ARCHITECTURE</div>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h4>⚙️ Task Management</h4>
+<p>
+Full CRUD operations implemented to allow precise tracking and modification of personal schedules.
+</p>
+</div>
+
+<div class="feature">
+<h4>🔔 Real-Time Alerts</h4>
+<p>
+Integrated scheduled notification services to ensure timely engagement with user-defined reminders.
+</p>
+</div>
+
+<div class="feature">
+<h4>💾 Offline Persistence</h4>
+<p>
+Utilized Shared Preferences for fast read/write execution and dependable offline data retention.
+</p>
+</div>
+
+<div class="feature">
+<h4>📱 Clean UI/UX</h4>
+<p>
+Designed responsive layouts using XML to guarantee a fluid and accessible mobile experience.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="certifications">
-    <div class="section-tag">— LEARNING JOURNEY</div>
-    <h2 class="section-title">Certifications</h2>
 
-    <div class="cert-grid">
-        <div class="cert-card">
-            <h3>Power BI for Beginners</h3>
-            <p>Great Learning</p>
-        </div>
-        <div class="cert-card">
-            <h3>Artificial Intelligence for All</h3>
-            <p>Infosys Springboard</p>
-        </div>
-        <div class="cert-card">
-            <h3>Value Added Course in Java</h3>
-            <p>Podhigai College of Engineering and Technology (OOP & Exception Handling)</p>
-        </div>
-    </div>
+<div class="section-tag">— LEARNING JOURNEY</div>
+<h2 class="section-title">Certifications</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<h3>Artificial Intelligence for All</h3>
+<p>Infosys Springboard</p>
+</div>
+
+<div class="cert-card">
+<h3>Full Stack Web Development</h3>
+<p>Infosys Springboard</p>
+</div>
+
+<div class="cert-card">
+<h3>Power BI for Beginners</h3>
+<p>Great Learning</p>
+</div>
+
+<div class="cert-card">
+<h3>Value Added Course in Java</h3>
+<p>Podhigai College of Engineering and Technology</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="achievements">
-    <div class="section-tag">— RECOGNITION</div>
-    <h2 class="section-title">Achievements</h2>
 
-    <div class="cert-grid">
-        <div class="cert-card">
-            <h3>Applied Analytical Solutions</h3>
-            <p>Built real-world projects in Android Development and Data Analytics, demonstrating applied technical skills.</p>
-        </div>
-        <div class="cert-card">
-            <h3>Structured Problem Solving</h3>
-            <p>Demonstrated strong problem-solving and analytical skills through consistent hands-on project development.</p>
-        </div>
-        <div class="cert-card">
-            <h3>Academic Consistency</h3>
-            <p>Maintained a strong academic tracking standard with a consistent 8.2/10 CGPA.</p>
-        </div>
-    </div>
+<div class="section-tag">— RECOGNITION</div>
+<h2 class="section-title">Achievements</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<h3>Applied Engineering</h3>
+<p>
+Successfully built and deployed end-to-end projects across Android Development, Data Analytics, and AI integrations.
+</p>
+</div>
+
+<div class="cert-card">
+<h3>Academic Excellence</h3>
+<p>
+Maintained a consistent corporate-aligned academic performance record with a commendable 8.2 CGPA.
+</p>
+</div>
+
+<div class="cert-card">
+<h3>Problem Solving Mastery</h3>
+<p>
+Demonstrated sharp engineering capabilities and advanced system workflow delivery through hands-on practice.
+</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="contact" class="contact">
-    <div class="section-tag">— CONTACT</div>
-    <h2 class="section-title">Let's Connect</h2>
-    <p>
-        Feel free to connect with me for internships, entry-level data analyst opportunities, and analytical collaborations.
-    </p>
 
-    <div class="contact-links">
-        <a href="mailto:vichuvishal1901@gmail.com">📧 vichuvishal1901@gmail.com</a>
-        <a href="tel:+917708867079">📱 7708867079</a>
-        <a href="https://linkedin.com/in/vishal-selvaraj-bb42502a6" target="_blank">🔗 LinkedIn</a>
-    </div>
+<div class="section-tag">— CONTACT</div>
+
+<h2 class="section-title">Let's Connect</h2>
+
+<p>
+Feel free to connect with me for internships, collaborations, enterprise data solution optimizations, and production-ready data projects.
+</p>
+
+<div class="contact-links">
+
+<a href="mailto:vichuvishal1901@gmail.com">
+📧 vichuvishal1901@gmail.com
+</a>
+
+<a href="tel:+917708867079">
+📱 +91 7708867079
+</a>
+
+<a href="https://linkedin.com/in/vishalselvarajbb42502a6" target="_blank">
+🔗 LinkedIn
+</a>
+
+</div>
+
 </section>
 
 <footer>
-    © 2026 Vishal Selvaraj • Portfolio
+© 2026 Vishal Selvaraj • Portfolio
 </footer>
-
-<script>
-document.querySelectorAll('.skill-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
-        const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
-        
-        card.style.setProperty('--mouse-x', `${x}%`);
-        card.style.setProperty('--mouse-y', `${y}%`);
-    });
-});
-</script>
 
 </body>
 </html>
